@@ -21,23 +21,28 @@ btn.onclick = function(event) {
     let hFeet = Number(heightFeet.value);
     let hInches = Number(heightInches.value);
     let weightValue = Number(weight.value);
-
-    let BMI = generateBMI(hFeet, hInches, weightValue);
-    console.log(BMI);
-    output.textContent = BMI;
-    if (BMI <= 18.5) {
-        box2.style.backgroundColor = 'yellow';
-        resType.textContent = '(Underweight)';
-        output.style.color = 'black';
-    } else if (BMI >= 18.5 && BMI <= 25) {
-        box2.style.backgroundColor = 'green';
-        resType.textContent = '(Normal Weight)';
-    } else if (BMI > 25 && BMI <= 30) {
-        box2.style.backgroundColor = 'orange';
-        resType.textContent = '(Overweight)';
+    console.log(hFeet);
+    console.log(hInches);
+    console.log(weightValue);
+    if (hFeet == 0 || hInches == 0 || weightValue == 0) {
+        alert(`Please enter required values. Don't leave input boxes empty.`);
     } else {
-        box2.style.backgroundColor = 'red';
-        resType.textContent = '(Obese)';
+        let BMI = generateBMI(hFeet, hInches, weightValue);
+        output.textContent = BMI;
+        if (BMI <= 18.5) {
+            box2.style.backgroundColor = 'yellow';
+            resType.textContent = '(Underweight)';
+            output.style.color = 'black';
+        } else if (BMI >= 18.5 && BMI <= 25) {
+            box2.style.backgroundColor = 'green';
+            resType.textContent = '(Normal Weight)';
+        } else if (BMI > 25 && BMI <= 30) {
+            box2.style.backgroundColor = 'orange';
+            resType.textContent = '(Overweight)';
+        } else {
+            box2.style.backgroundColor = 'red';
+            resType.textContent = '(Obese)';
+        }
+        result.style.display = 'flex';
     }
-    result.style.display = 'flex';
 }
