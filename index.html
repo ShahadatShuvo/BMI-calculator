@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">
+            <form action="">
+                <label for="heightFeet">Height: (Feet)</label>
+                <input type="number" name="" id="heightFeet" value="">
+                <div class="gap"></div>
+                <label for="heightInches"> (Inches)</label>
+                <input type="number" name="" id="heightInches" value=""><br><br>
+                <label for="weight">Weight: (kg)</label>
+                <input type="number" name="" id="weight" value=""><br><br>
+                <button id="btn" class="btn" type="submit">Calculate BMI</button>
+                <button id="btn-again" class="btn" type="submit">Again</button>
+            </form>
+
+            <div class="result">
+                <div class="part1 box1">
+                    <div id="bmi" class="text-content">
+                        Your BMI:
+                    </div>
+                </div>
+                <div class="part2 box2">
+                    <div class="text-content">
+                        <span id="res">18</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="describe">
+                <div class="item item1">
+                    <div class="text-content">
+                        <p>Underweight</p>
+                        <span>&lt;18.5</span>
+                    </div>
+                </div>
+                <div class="item item2">
+                    <div class="text-content">
+                        <p>Normal Weight</p>
+                        <span>18.5 - 25</span>
+                    </div>
+                </div>
+                <div class="item item3">
+                    <div class="text-content">
+                        <p>Overweight</p>
+                        <span>25-30</span>
+                    </div>
+                </div>
+                <div class="item item4">
+                    <div class="text-content">
+                        <p>Obese</p>
+                        <span>&#62;30</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
