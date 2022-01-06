@@ -119,7 +119,7 @@
 @media only screen and (max-width: 900px) {
     /*Small smartphones [325px -> 425px]*/
     .parent {
-        height: 110vh;
+        height: 130vh;
     }
     .child {
         width: 85vw;
