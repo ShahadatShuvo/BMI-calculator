@@ -5,6 +5,7 @@ const btn = document.querySelector('#btn');
 const result = document.querySelector('.result');
 const output = document.querySelector('#res');
 const box2 = document.querySelector('.box2');
+const resType = document.querySelector('#resType');
 
 
 function generateBMI(hFeet, hInches, weightValue) {
@@ -26,13 +27,17 @@ btn.onclick = function(event) {
     output.textContent = BMI;
     if (BMI <= 18.5) {
         box2.style.backgroundColor = 'yellow';
+        resType.textContent = '(Underweight)';
         output.style.color = 'black';
     } else if (BMI >= 18.5 && BMI <= 25) {
         box2.style.backgroundColor = 'green';
+        resType.textContent = '(Normal Weight)';
     } else if (BMI > 25 && BMI <= 30) {
         box2.style.backgroundColor = 'orange';
+        resType.textContent = '(Overweight)';
     } else {
         box2.style.backgroundColor = 'red';
+        resType.textContent = '(Obese)';
     }
     result.style.display = 'flex';
 }
